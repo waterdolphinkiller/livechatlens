@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 User-agent: OAI-SearchBot
@@ -13,6 +13,5 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://livechatlens.dev/sitemap.xml
-# AI Search / GEO Reference: https://livechatlens.dev/llms.txt
-
+Sitemap: https://livechatlens.pages.dev/sitemap.xml
+# AI Search / GEO Reference: https://livechatlens.pages.dev/llms.txt
