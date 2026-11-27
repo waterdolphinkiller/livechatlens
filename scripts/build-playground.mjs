@@ -1,4 +1,4 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 import path from "node:path";
 
 /**
@@ -86,12 +86,5 @@ const builtHtml = template.replace("/* __LIVECHATLENS_CORE_BUNDLE__ */", () => c
 const repoOutPath = path.join(root, "apps/demo/index.html");
 fs.writeFileSync(repoOutPath, builtHtml, "utf8");
 
-const canvasOutDir = "/working_dir/c_4617ac2c39ee0f10/artifacts/file_generation/ttl=63d/output";
-fs.mkdirSync(canvasOutDir, { recursive: true });
-const canvasOutPath = path.join(canvasOutDir, "livechatlens-playground.html");
-fs.writeFileSync(canvasOutPath, builtHtml, "utf8");
+console.log("Built extension bundle + Web Playground.");
 
-console.log(`Built extension bundle + single-file Web Playground (${builtHtml.length} bytes):`);
-console.log(`  - ${extBundlePath}`);
-console.log(`  - ${repoOutPath}`);
-console.log(`  - ${canvasOutPath}`);
