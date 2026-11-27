@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
 User-agent: OAI-SearchBot
@@ -15,3 +15,4 @@ Allow: /
 
 Sitemap: https://livechatlens.dev/sitemap.xml
 # AI Search / GEO Reference: https://livechatlens.dev/llms.txt
+

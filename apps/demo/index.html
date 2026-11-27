@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LiveChatLens — Free Live-Chat AI Detector, Dark-Pattern Auditor &amp; US Chargeback Evidence Pack</title>
+  <title>LiveChatLens â€” Free Live-Chat AI Detector, Dark-Pattern Auditor &amp; US Chargeback Evidence Pack</title>
   <meta name="description" content="Free, 100% local US live-chat AI transparency inspector. Spot hidden AI chatbots, store-credit traps &amp; CA AB 1609 violations, and export bank-ready PDF + SHA-256 chargeback packs for Chase, Amex, Citi &amp; Capital One." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://livechatlens.dev/" />
@@ -11,10 +11,10 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="LiveChatLens" />
   <meta property="og:url" content="https://livechatlens.dev/" />
-  <meta property="og:title" content="LiveChatLens — Free Live-Chat AI Inspector &amp; US Chargeback Evidence Pack" />
+  <meta property="og:title" content="LiveChatLens â€” Free Live-Chat AI Inspector &amp; US Chargeback Evidence Pack" />
   <meta property="og:description" content="100% local-first, 0% human false-positive inspector for US live chats. Export native bank PDFs, Chase/Amex/Citi/Capital One dispute narratives, CFPB/AB 1609 drafts, and SHA-256 sealed ZIPs." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LiveChatLens — Free Live-Chat AI Inspector &amp; US Chargeback Evidence Pack" />
+  <meta name="twitter:title" content="LiveChatLens â€” Free Live-Chat AI Inspector &amp; US Chargeback Evidence Pack" />
   <meta name="twitter:description" content="Spot hidden AI chatbots, store-credit traps &amp; dark patterns locally. Export bank-ready PDF + SHA-256 chargeback packs for free." />
   <script type="application/ld+json">
   {
@@ -52,7 +52,7 @@
           { "@type": "Question", "name": "How accurate is LiveChatLens, and why doesn't it guess AI from writing style?", "acceptedAnswer": { "@type": "Answer", "text": "LiveChatLens never guesses AI authorship from writing style alone. It inspects observable UI disclosures, machine-readable DOM attributes, WCAG contrast, and streaming timing, abstaining as INCONCLUSIVE when direct evidence is absent to keep human false positives at 0%." } },
           { "@type": "Question", "name": "Which US credit card dispute portals does the narrative builder support?", "acceptedAnswer": { "@type": "Answer", "text": "Built-in issuer profiles support Chase (1,000 chars), American Express (750 chars), Citi (1,000 chars), Capital One (800 chars), and Generic US issuers (1,500 chars), plus a Fair Credit Billing Act 60-day written notice reminder." } },
           { "@type": "Question", "name": "What files are inside the Sealed Evidence ZIP, and how can a bank verify it wasn't altered?", "acceptedAnswer": { "@type": "Answer", "text": "Each ZIP includes chargeback-evidence.pdf, chargeback-report.html, chargeback-narrative.txt, regulatory-complaint-pack.txt, evidence-receipt.md, receipt.json, optional screenshot.png and timestamp.tsr, and manifest.json with per-file SHA-256 digests verifiable via livechatlens verify." } },
-          { "@type": "Question", "name": "How does optional RFC 3161 timestamping work without exposing my chat privacy?", "acceptedAnswer": { "@type": "Answer", "text": "RFC 3161 timestamping is strictly opt-in. Only the 32-byte SHA-256 hash — never your chat text — is sent to a public Time Stamping Authority (such as FreeTSA) to obtain a signed timestamp.tsr token." } },
+          { "@type": "Question", "name": "How does optional RFC 3161 timestamping work without exposing my chat privacy?", "acceptedAnswer": { "@type": "Answer", "text": "RFC 3161 timestamping is strictly opt-in. Only the 32-byte SHA-256 hash â€” never your chat text â€” is sent to a public Time Stamping Authority (such as FreeTSA) to obtain a signed timestamp.tsr token." } },
           { "@type": "Question", "name": "Which live-chat platforms does the Chrome extension inspect?", "acceptedAnswer": { "@type": "Answer", "text": "The read-only Chrome MV3 extension detects Salesforce Agentforce (including open Shadow DOM), Intercom Fin, Zendesk Messaging, Ada, Sierra, Gorgias, Crisp, and Tidio, plus a structural heuristic fallback for obfuscated CSS-in-JS widgets." } },
           { "@type": "Question", "name": "How can US businesses audit their chatbots for California AB 1609 before January 1, 2027?", "acceptedAnswer": { "@type": "Answer", "text": "Engineering teams can add the LiveChatLens GitHub Action (action.yml) or run livechatlens ab1609 in CI to automatically fail pull requests if AI disclosure is missing, buried, low-contrast, or lacks a human escalation route." } },
           { "@type": "Question", "name": "Is LiveChatLens legal advice or a guarantee that my bank will approve a chargeback?", "acceptedAnswer": { "@type": "Answer", "text": "No. LiveChatLens is an observational documentation tool for personal record-keeping, dispute preparation, and QA compliance testing. Final decisions rest with your card issuer under card-network rules and the FCBA." } }
@@ -878,7 +878,7 @@
       </nav>
 
       <div class="nav-actions">
-        <button id="openCmdBtn" type="button" class="btn btn-sm btn-ghost font-mono-code" title="Quick Actions (Cmd/Ctrl+K)">⌘K</button>
+        <button id="openCmdBtn" type="button" class="btn btn-sm btn-ghost font-mono-code" title="Quick Actions (Cmd/Ctrl+K)">âŒ˜K</button>
         <a href="#workbench" class="btn btn-sm btn-primary">Open Inspector</a>
       </div>
     </div>
@@ -891,11 +891,11 @@
         <div class="hero-left" data-reveal>
           <div class="hero-kicker">
             <span class="hero-kicker-dot"></span>
-            100% Local-First · Zero Cloud Uploads · Apache-2.0
+            100% Local-First Â· Zero Cloud Uploads Â· Apache-2.0
           </div>
           <h1>Turn live-chat promises into <em>bank-ready</em> forensic evidence.</h1>
           <p class="hero-sub">
-            LiveChatLens audits customer-support chats locally in your browser — surfacing hidden AI disclosures, store-credit traps, and human-escalation loops, then sealing a PII-redacted PDF &amp; SHA-256 Chargeback Pack for Chase, Amex, Citi, and Capital One.
+            LiveChatLens audits customer-support chats locally in your browser â€” surfacing hidden AI disclosures, store-credit traps, and human-escalation loops, then sealing a PII-redacted PDF &amp; SHA-256 Chargeback Pack for Chase, Amex, Citi, and Capital One.
           </p>
           <div class="hero-cta">
             <a href="#workbench" id="heroLaunchBtn" class="btn btn-primary">Inspect a Transcript Now</a>
@@ -916,7 +916,7 @@
             </div>
             <div>
               <div class="metric-val">$0 Free</div>
-              <div class="metric-lbl">Open-source · No sign-up</div>
+              <div class="metric-lbl">Open-source Â· No sign-up</div>
             </div>
           </div>
         </div>
@@ -934,30 +934,30 @@
 
             <div class="dossier-pills" id="heroPillars" role="tablist">
               <button type="button" class="pillar-btn active" data-pillar="0" role="tab" aria-selected="true">
-                <span class="p-num">01 · TRANSPARENCY</span>
+                <span class="p-num">01 Â· TRANSPARENCY</span>
                 <span class="p-title">AI &amp; Dark-Pattern Audit</span>
               </button>
               <button type="button" class="pillar-btn" data-pillar="1" role="tab" aria-selected="false">
-                <span class="p-num">02 · COMMITMENTS</span>
+                <span class="p-num">02 Â· COMMITMENTS</span>
                 <span class="p-title">Store-Credit Trap Guard</span>
               </button>
               <button type="button" class="pillar-btn" data-pillar="2" role="tab" aria-selected="false">
-                <span class="p-num">03 · CHARGEBACK</span>
+                <span class="p-num">03 Â· CHARGEBACK</span>
                 <span class="p-title">Bank PDF &amp; Issuer Drafts</span>
               </button>
               <button type="button" class="pillar-btn" data-pillar="3" role="tab" aria-selected="false">
-                <span class="p-num">04 · INTEGRITY</span>
+                <span class="p-num">04 Â· INTEGRITY</span>
                 <span class="p-title">SHA-256 &amp; AB 1609 Gate</span>
               </button>
             </div>
 
             <div id="heroStage" class="dossier-stage">
-              <span id="heroStageBadge" class="stage-badge badge-crimson">LOW_VISIBILITY_DISCLOSURE · WCAG 1.12:1</span>
+              <span id="heroStageBadge" class="stage-badge badge-crimson">LOW_VISIBILITY_DISCLOSURE Â· WCAG 1.12:1</span>
               <p id="heroStageCopy" class="stage-quote">
                 Detects upfront vs. late AI notices, alpha-blended invisible banners, buried Terms of Service footnotes, repeated human-escalation loops, and fake human handoffs across 8 major US chat platforms.
               </p>
               <div class="stage-meta">
-                <span id="heroStageCode">CA SB 1001 · CA AB 1609 · UT §13-77-103</span>
+                <span id="heroStageCode">CA SB 1001 Â· CA AB 1609 Â· UT Â§13-77-103</span>
                 <span id="heroStageAction" style="color: var(--emerald); font-weight: 600;">0% Human FPR</span>
               </div>
             </div>
@@ -1040,8 +1040,8 @@
                   <div id="verdictBadge" class="verdict-label">INCONCLUSIVE</div>
                 </div>
                 <div style="display:flex; flex-wrap:wrap; gap:6px;">
-                  <span id="evidenceLevelBadge" class="stage-badge badge-neutral">evidence: —</span>
-                  <span id="transparencyBadge" class="stage-badge badge-neutral">audit: —</span>
+                  <span id="evidenceLevelBadge" class="stage-badge badge-neutral">evidence: â€”</span>
+                  <span id="transparencyBadge" class="stage-badge badge-neutral">audit: â€”</span>
                 </div>
               </div>
               <p id="verdictSummary" style="margin: 0; font-size: 14px; color: var(--ink-2);"></p>
@@ -1105,7 +1105,7 @@
               <div class="hash-strip">
                 <div style="min-width: 0; flex: 1;">
                   <div class="font-mono-code" style="font-size:10.5px; color:var(--mute); text-transform:uppercase;">Tamper-Evident Receipt SHA-256</div>
-                  <code id="receiptHash" class="font-mono-code" style="font-size:11.5px; color:var(--emerald); word-break:break-all;">—</code>
+                  <code id="receiptHash" class="font-mono-code" style="font-size:11.5px; color:var(--emerald); word-break:break-all;">â€”</code>
                 </div>
                 <div style="display:flex; flex-wrap:wrap; gap:6px;">
                   <button id="exportSealedZipBtn" type="button" class="btn btn-sm btn-ink">Sealed Evidence ZIP</button>
@@ -1132,7 +1132,7 @@
           <div class="font-mono-code" style="font-size: 11.5px; color: var(--emerald); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;">Methodology &amp; Workflow</div>
           <h2 class="font-serif-display" style="font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1; margin: 0 0 14px;">Four steps from live-chat dispute to bank-ready proof.</h2>
           <p style="margin: 0; color: var(--ink-2); font-size: 15px;">
-            <strong>LiveChatLens</strong> is a free, open-source (Apache-2.0) US live-chat AI transparency inspector and chargeback evidence toolkit. Rather than guessing AI authorship from prose style, it audits observable interface disclosures, WCAG contrast dark patterns, and merchant commitments — keeping human agent false positives at <strong>0%</strong>.
+            <strong>LiveChatLens</strong> is a free, open-source (Apache-2.0) US live-chat AI transparency inspector and chargeback evidence toolkit. Rather than guessing AI authorship from prose style, it audits observable interface disclosures, WCAG contrast dark patterns, and merchant commitments â€” keeping human agent false positives at <strong>0%</strong>.
           </p>
         </div>
 
@@ -1182,23 +1182,23 @@
             <tbody>
               <tr>
                 <td><strong>Promised Refund / Credit Not Processed</strong></td>
-                <td class="font-mono-code" style="color: var(--emerald); white-space: nowrap;">Visa 13.6 · Mastercard 4853 · Amex C02</td>
+                <td class="font-mono-code" style="color: var(--emerald); white-space: nowrap;">Visa 13.6 Â· Mastercard 4853 Â· Amex C02</td>
                 <td>Fair Credit Billing Act (FCBA) 60-day written billing-error notice window</td>
               </tr>
               <tr>
                 <td><strong>Canceled Auto-Renewal / Fee Waiver Ignored</strong></td>
-                <td class="font-mono-code" style="color: var(--emerald); white-space: nowrap;">Visa 13.2 · Mastercard 4841 · Amex C18/C28</td>
-                <td>FTC Act Section 5 · Written cancellation &amp; recurring billing records</td>
+                <td class="font-mono-code" style="color: var(--emerald); white-space: nowrap;">Visa 13.2 Â· Mastercard 4841 Â· Amex C18/C28</td>
+                <td>FTC Act Section 5 Â· Written cancellation &amp; recurring billing records</td>
               </tr>
               <tr>
                 <td><strong>Store-Credit / Travel-Voucher Substitution Trap</strong></td>
-                <td class="font-mono-code" style="color: var(--brass); white-space: nowrap;">Visa 13.5 / 13.3 · Amex C31</td>
-                <td>CFPB Consumer Complaint Portal · Misrepresentation of cash refund terms</td>
+                <td class="font-mono-code" style="color: var(--brass); white-space: nowrap;">Visa 13.5 / 13.3 Â· Amex C31</td>
+                <td>CFPB Consumer Complaint Portal Â· Misrepresentation of cash refund terms</td>
               </tr>
               <tr>
                 <td><strong>Undisclosed AI Bot / Blocked Human Escalation</strong></td>
                 <td class="font-mono-code" style="color: var(--mute); white-space: nowrap;">Supporting Transparency Record</td>
-                <td>CA SB 1001 · CA AB 1609 (eff. Jan 1, 2027) · Utah § 13-77-103 · Maine LD 1727</td>
+                <td>CA SB 1001 Â· CA AB 1609 (eff. Jan 1, 2027) Â· Utah Â§ 13-77-103 Â· Maine LD 1727</td>
               </tr>
             </tbody>
           </table>
@@ -1229,7 +1229,7 @@
           </details>
           <details class="faq-item">
             <summary><span>How accurate is LiveChatLens, and why doesn't it guess AI from writing style?</span><span class="faq-plus">+</span></summary>
-            <p>Probabilistic text detectors frequently misclassify human support agents and non-native English writers. LiveChatLens never guesses from writing style alone — it inspects observable UI disclosures, machine-readable DOM attributes, WCAG contrast, and streaming behavior, abstaining as <code>INCONCLUSIVE</code> when direct evidence is absent to maintain a 0% human false-positive rate.</p>
+            <p>Probabilistic text detectors frequently misclassify human support agents and non-native English writers. LiveChatLens never guesses from writing style alone â€” it inspects observable UI disclosures, machine-readable DOM attributes, WCAG contrast, and streaming behavior, abstaining as <code>INCONCLUSIVE</code> when direct evidence is absent to maintain a 0% human false-positive rate.</p>
           </details>
           <details class="faq-item">
             <summary><span>Which US credit card dispute portals does the narrative builder support?</span><span class="faq-plus">+</span></summary>
@@ -1241,7 +1241,7 @@
           </details>
           <details class="faq-item">
             <summary><span>How does optional RFC 3161 timestamping work without exposing my chat privacy?</span><span class="faq-plus">+</span></summary>
-            <p>RFC 3161 timestamping is strictly opt-in. When enabled in the Chrome extension or CLI, LiveChatLens sends only the 32-byte SHA-256 hash — never a single word of your chat — to a public Time Stamping Authority (such as FreeTSA) and embeds the signed <code>timestamp.tsr</code> token inside your Sealed ZIP.</p>
+            <p>RFC 3161 timestamping is strictly opt-in. When enabled in the Chrome extension or CLI, LiveChatLens sends only the 32-byte SHA-256 hash â€” never a single word of your chat â€” to a public Time Stamping Authority (such as FreeTSA) and embeds the signed <code>timestamp.tsr</code> token inside your Sealed ZIP.</p>
           </details>
           <details class="faq-item">
             <summary><span>Which live-chat platforms does the Chrome extension inspect?</span><span class="faq-plus">+</span></summary>
@@ -1261,7 +1261,7 @@
   </main>
 
   <footer class="container site-footer">
-    <div>LiveChatLens v2.1.0-US · Apache-2.0 Open Source · 100% Local-First · Observational documentation only (not legal advice).</div>
+    <div>LiveChatLens v2.1.0-US Â· Apache-2.0 Open Source Â· 100% Local-First Â· Observational documentation only (not legal advice).</div>
     <div style="display:flex; gap:18px;">
       <a href="https://livechatlens.dev/llms.txt" target="_blank" rel="noopener noreferrer">llms.txt</a>
       <a href="https://livechatlens.dev/llms-full.txt" target="_blank" rel="noopener noreferrer">llms-full.txt</a>
@@ -5137,14 +5137,14 @@ const BENCHMARK_FIXTURES = [
 
       const HERO_PILLARS = [
         {
-          badge: "LOW_VISIBILITY_DISCLOSURE · WCAG 1.12:1",
+          badge: "LOW_VISIBILITY_DISCLOSURE Â· WCAG 1.12:1",
           badgeClass: "badge-crimson",
           copy: "Detects upfront vs. late AI notices, alpha-blended invisible banners, buried Terms of Service footnotes, repeated human-escalation loops, and fake human handoffs across 8 major US chat platforms.",
-          code: "CA SB 1001 · CA AB 1609 · UT §13-77-103",
+          code: "CA SB 1001 Â· CA AB 1609 Â· UT Â§13-77-103",
           action: "0% Human FPR",
         },
         {
-          badge: "REFUND_GUARANTEE · store_credit_only",
+          badge: "REFUND_GUARANTEE Â· store_credit_only",
           badgeClass: "badge-brass",
           copy: "Catches airline eCredit, merchandise credit, and conditional restocking-fee traps while our clause-scoped Negation Guard prevents policy denials from ever triggering false flags.",
           code: "Action+Target US Semantic Slots",
@@ -5154,14 +5154,14 @@ const BENCHMARK_FIXTURES = [
           badge: "BANK-READY PDF + SEALED ZIP",
           badgeClass: "badge-emerald",
           copy: "Generates a zero-dependency US Letter PDF and character-limit-safe dispute narratives tailored for Chase (1,000), Amex (750), Citi (1,000), and Capital One (800) with CFPB & AB 1609 drafts.",
-          code: "Visa 13.6/13.2 · MC 4853 · Amex C02",
+          code: "Visa 13.6/13.2 Â· MC 4853 Â· Amex C02",
           action: "1-Click Export",
         },
         {
-          badge: "TAMPER-EVIDENT SHA-256 · RFC 3161",
+          badge: "TAMPER-EVIDENT SHA-256 Â· RFC 3161",
           badgeClass: "badge-emerald",
           copy: "Seals every file in manifest.json with exact binary SHA-256 digests, optional hash-only RFC 3161 TSA timestamping, independent 1-byte tamper verification, and a turnkey GitHub Action CI gate.",
-          code: "livechatlens verify · ab1609 CI",
+          code: "livechatlens verify Â· ab1609 CI",
           action: "1,500+ Fuzz Passed",
         },
       ];
@@ -5261,7 +5261,7 @@ const BENCHMARK_FIXTURES = [
           const active = f.id === state.activeFixtureId ? " active" : "";
           return `<button type="button" class="preset-item${active}" data-preset-id="${escapeHtml(f.id)}">
             <span class="pt-name">${escapeHtml(f.description || f.id)}</span>
-            <span class="pt-meta">${escapeHtml(f.expectedVerdict || f.groundTruthClass || "CASE")} · ${f.session.turns.length} turns</span>
+            <span class="pt-meta">${escapeHtml(f.expectedVerdict || f.groundTruthClass || "CASE")} Â· ${f.session.turns.length} turns</span>
           </button>`;
         }).join("");
       }
@@ -5309,7 +5309,7 @@ const BENCHMARK_FIXTURES = [
           el("darkPatternBanner").innerHTML = r.darkPatterns
             .map(
               (dp) => `<div class="ledger-item alert" style="margin-bottom:6px;">
-                <div class="font-mono-code" style="font-size:11.5px; font-weight:600; color:var(--crimson);">DARK PATTERN · ${escapeHtml(dp.code)}</div>
+                <div class="font-mono-code" style="font-size:11.5px; font-weight:600; color:var(--crimson);">DARK PATTERN Â· ${escapeHtml(dp.code)}</div>
                 <div style="font-size:12.5px; color:var(--ink); margin-top:2px;">${escapeHtml(dp.explanation)}</div>
               </div>`
             )
@@ -5338,7 +5338,7 @@ const BENCHMARK_FIXTURES = [
                     <span class="stage-badge badge-neutral">${escapeHtml(cm.speakerStateAtTurn)}</span>
                   </div>
                 </div>
-                <div style="font-size:13px; color:var(--ink); margin-bottom:6px;">“${highlightRedacted(cm.excerptRedacted)}”</div>
+                <div style="font-size:13px; color:var(--ink); margin-bottom:6px;">â€œ${highlightRedacted(cm.excerptRedacted)}â€</div>
                 <div style="font-size:12px; color:var(--ink-2);">${escapeHtml(cm.riskNote)}</div>
               </div>`;
             })
@@ -5382,7 +5382,7 @@ const BENCHMARK_FIXTURES = [
                   <span class="stage-badge badge-neutral">${escapeHtml(ev.strength.toUpperCase())}</span>
                 </div>
                 <div style="font-size:13px; color:var(--ink);">${escapeHtml(ev.explanation)}</div>
-                ${ev.excerptRedacted ? `<div style="font-size:12px; color:var(--mute); margin-top:4px;">Excerpt: “${highlightRedacted(ev.excerptRedacted)}”</div>` : ""}
+                ${ev.excerptRedacted ? `<div style="font-size:12px; color:var(--mute); margin-top:4px;">Excerpt: â€œ${highlightRedacted(ev.excerptRedacted)}â€</div>` : ""}
               </div>`
             )
             .join("");
@@ -5656,3 +5656,4 @@ const BENCHMARK_FIXTURES = [
   </script>
 </body>
 </html>
+
