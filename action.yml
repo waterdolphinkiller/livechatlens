@@ -1,5 +1,5 @@
 name: "LiveChatLens — US AI Chatbot & CA AB 1609 Compliance Gate"
-description: "Zero-dependency CI compliance gate auditing live-chat transcripts and fixtures for California AB 1609 / SB 1001 AI disclosure, WCAG visibility, human-handoff routes, and high-stakes commitment hallucinations."
+description: "Zero-dependency CI gate auditing live-chat AI disclosures, WCAG contrast & CA AB 1609 human handoff."
 author: "LiveChatLens Contributors"
 branding:
   icon: "shield"
