@@ -1,0 +1,69 @@
+{
+  "description": "Offline US corpus verification sample modeled after Bitext 27K LLM Support, US CFPB Billing/Refund Disputes, and US Human Support Replies.",
+  "bitextLlmSamples": [
+    {
+      "id": "bitext-01",
+      "turns": [
+        "Rest assured, I'm here to assist you every step of the way. Here's what you need to do: 1. Sign into Your Account 2. Navigate to Your Orders.",
+        "Our goal is to make this process as seamless as possible for you. Let's go through the steps together: 1. Open Billing 2. Select Cancel."
+      ]
+    },
+    {
+      "id": "bitext-02",
+      "turns": [
+        "I'm sensitive to the fact that you're seeking assistance with canceling your purchase. Rest assured, I'm here to guide you through the process.",
+        "I've come to understand that you need assistance with a refund. I'm here to help streamline the process and ensure your satisfaction."
+      ]
+    }
+  ],
+  "cfpbCommitmentSamples": [
+    {
+      "id": "cfpb-01",
+      "expectedCategory": "refund_guarantee",
+      "expectedQualifier": "unconditional",
+      "text": "I've gone ahead and reversed that charge on your next billing cycle."
+    },
+    {
+      "id": "cfpb-02",
+      "expectedCategory": "refund_guarantee",
+      "expectedQualifier": "store_credit_only",
+      "text": "Good news! We approved your refund as store credit only, not to your original payment method."
+    },
+    {
+      "id": "cfpb-03",
+      "expectedCategory": "refund_guarantee",
+      "expectedQualifier": "conditional",
+      "text": "You are eligible for a full refund subject to inspection and less a 15% restocking fee."
+    },
+    {
+      "id": "cfpb-04",
+      "expectedCategory": "cancellation_terms",
+      "expectedQualifier": "unconditional",
+      "text": "We have removed the late fee and turned off your auto-renewal so you won't be charged again."
+    },
+    {
+      "id": "cfpb-05-denial",
+      "expectedCategory": null,
+      "expectedQualifier": null,
+      "text": "Sorry, we cannot reverse that charge or waive the late fee on past-due accounts."
+    }
+  ],
+  "usHumanSupportSamples": [
+    {
+      "id": "us-human-01",
+      "agentLabel": "Marcus · Support Specialist",
+      "turns": [
+        "Hey! Pulled up your account—looks like the renewal hit yesterday.",
+        "Give me two mins to check with billing on whether we can adjust that for you."
+      ]
+    },
+    {
+      "id": "us-human-02",
+      "agentLabel": "Rachel · Live Agent",
+      "turns": [
+        "Hi there, I'm Rachel. Sorry about the delayed package! Let me check FedEx tracking right now.",
+        "FedEx shows it's at the Newark hub and scheduled for delivery tomorrow by 5 PM."
+      ]
+    }
+  ]
+}

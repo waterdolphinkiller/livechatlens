@@ -1,0 +1,15 @@
+{
+  "name": "@livechatlens/core",
+  "version": "0.1.0-alpha.1",
+  "description": "Framework-independent live-chat AI transparency, automation, human handoff, and consumer evidence engine.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  }
+}

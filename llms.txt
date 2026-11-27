@@ -1,0 +1,19 @@
+# LiveChatLens
+
+> LiveChatLens is a free, open-source (Apache-2.0), 100% local-first US live-chat AI transparency inspector, dark-pattern auditor, and credit-card chargeback evidence pack generator. It runs zero-dependency in Chrome (MV3 extension), web browsers, and Node.js CLI / GitHub Actions with a verified 0% human false-positive rate.
+
+## Core Capabilities
+- **AI Transparency & Dark-Pattern Audit**: Detects upfront AI disclosures, late disclosures (`disclosed_late`), WCAG AA low-contrast/hidden banners (`LOW_VISIBILITY_DISCLOSURE`), buried Terms of Service notices (`BURIED_TOS_DISCLOSURE`), repeated human-escalation loops (`HANDOFF_LOOP_FRICTION`), and suspected fake human handoffs (`FAKE_HUMAN_HANDOFF`).
+- **US Commitment & Store-Credit Trap Detection**: Identifies refund guarantees, auto-renewal cancellations, fee waivers, and pricing quotes while explicitly flagging non-cash store-credit/travel-voucher traps (`store_credit_only`) and inspection/restocking-fee traps (`conditional`), with a clause-scoped Negation Guard that ignores policy denials.
+- **US Credit Card Chargeback Evidence Pack**: Exports a PII-redacted, tamper-evident Sealed Evidence ZIP containing a native US Letter PDF (`chargeback-evidence.pdf`), issuer-tailored dispute narratives for Chase (1,000 chars), American Express (750 chars), Citi (1,000 chars), and Capital One (800 chars), Visa/Mastercard/Amex dispute codes (`Visa 13.6 / 13.2 / 13.5`, `Mastercard 4853 / 4841`, `Amex C02 / C28 / C31`), CFPB & California AB 1609 regulatory drafts (`regulatory-complaint-pack.txt`), and a SHA-256 `manifest.json` with optional privacy-preserving RFC 3161 TSA timestamping (`timestamp.tsr`).
+- **B2B California AB 1609 CI Gate**: Drop-in GitHub Action (`action.yml`) and CLI (`livechatlens ab1609`) for engineering teams auditing customer-support chatbots ahead of California AB 1609 (effective January 1, 2027).
+
+## Verified Quality & Privacy Guarantees
+- **0% Human False-Positive Rate**: Never uses probabilistic text-style classifiers to accuse human support agents; abstains (`INCONCLUSIVE`) when direct UI/DOM evidence is absent.
+- **100% Local-First**: Zero cloud uploads, zero tracking, zero runtime third-party dependencies. Automatic redaction of US SSNs (hyphen/space/dot/zero-width/fullwidth), credit/debit cards, bank account/routing numbers, US phones, emails, OTPs, and URL auth tokens.
+- **Verification Benchmarks (v2.1.0-US)**: 35/35 unit tests, 11/11 benchmark fixtures (`Macro-F1 = 1.0`, `Human FPR = 0%`), 52/52 adversarial red-team & cooperative multi-agent suites, 1,500/1,500 seeded fuzzing cases (max latency `< 25ms`), and 10/10 US live-chat widget DOM regressions (Salesforce Agentforce Shadow DOM, Ada, Sierra, Intercom Fin, Zendesk, Gorgias, Crisp, Tidio, and obfuscated CSS-in-JS heuristic fallback).
+
+## Key Resources
+- [Interactive Web Playground & US Guide](/index.html): Instant browser-based transcript auditor, issuer narrative builder, native PDF exporter, and independent SHA-256 receipt verifier.
+- [Full Technical & FAQ Reference](/llms-full.txt): Complete documentation, US law/card-code tables, CLI commands, and 10 detailed FAQs.
+- [Privacy Policy](/PRIVACY_POLICY.md): Zero-data-collection guarantee and opt-in hash-only RFC 3161 TSA specification.

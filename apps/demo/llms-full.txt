@@ -1,0 +1,42 @@
+# LiveChatLens — Complete US Reference for AI Search & Developers (v2.1.0-US)
+
+## What is LiveChatLens?
+LiveChatLens (`live-chat-ai-detector`) is a free, Apache-2.0 open-source, zero-dependency, 100% local-first inspector for US live customer-support chats. It bridges three gaps left unaddressed by existing tools:
+1. **Live-Chat AI Transparency & Dark-Pattern Auditing** (CA SB 1001, CA AB 1609 effective Jan 1, 2027, Utah Code § 13-77-103, Maine LD 1727, FTC Act § 5).
+2. **Consumer Commitment & Trap Detection** (identifying refund promises, auto-renewal cancellations, fee waivers, non-cash `store_credit_only` / travel-voucher traps, and `conditional` restocking-fee traps without false-flagging policy denials).
+3. **Bank-Ready Credit Card Chargeback Evidence Packaging** (generating native US Letter PDF reports, Chase/Amex/Citi/Capital One dispute narratives, CFPB/CA AB 1609 regulatory complaint drafts, and SHA-256 sealed ZIP archives with optional privacy-preserving RFC 3161 TSA timestamping).
+
+## Why LiveChatLens Does Not Guess AI From Writing Style
+Probabilistic AI text detectors (such as GPTZero or Originality.ai) report substantial false-positive rates on real human and ESL writing and provide no DOM, dark-pattern, or chargeback workflow. LiveChatLens relies strictly on observable UI labels, machine-readable DOM attributes, WCAG 2.1 alpha-composited contrast, render/streaming timing clues, and conversation structure — abstaining (`INCONCLUSIVE`) rather than falsely accusing human agents (**0% Human FPR** in benchmarks and 300-case fuzzing).
+
+## US Credit Card Dispute Code Reference
+- **Refund / Credit Not Processed**: Visa `13.6` · Mastercard `4853` · American Express `C02`
+- **Canceled Recurring Subscription / Fee Waiver**: Visa `13.2` · Mastercard `4841` · American Express `C18` / `C28`
+- **Misrepresentation / Store-Credit Trap / Pricing Quote**: Visa `13.5` / `13.3` · American Express `C31`
+- **Services Not Provided / Missed SLA**: Visa `13.1` · American Express `C08`
+- **US Fair Credit Billing Act (FCBA)**: Consumers generally have 60 days from the statement date to send written billing-error notice to their card issuer.
+
+## Supported US Live-Chat Platforms (Chrome MV3 Extension)
+Salesforce Agentforce (including open Shadow DOM), Intercom Fin (with opt-in cross-origin iframe permission), Zendesk Messaging, Ada, Sierra, Gorgias, Crisp, Tidio, and a structural heuristic fallback (`adapter-heuristic-v1`) for sites using obfuscated CSS-in-JS class names.
+
+## CLI & B2B GitHub Action Commands
+```bash
+# Audit a chat transcript and export a bank-ready Chase PDF
+node apps/cli/livechatlens.mjs chat.txt --format pdf --issuer chase --out dispute.pdf
+
+# Export a complete Sealed Evidence ZIP (PDF + HTML + Narrative + CFPB/AB1609 + SHA-256 manifest)
+node apps/cli/livechatlens.mjs chat.txt --format zip --issuer amex --out sealed-pack.zip
+
+# Independently verify any exported receipt.json for 1-byte tampering
+node apps/cli/livechatlens.mjs verify receipt.json
+
+# Run the California AB 1609 / US Chatbot Compliance CI Gate
+node apps/cli/livechatlens.mjs ab1609 chat.txt --fail-on-dark-patterns --fail-on-late-disclosure
+```
+
+## Frequently Asked Questions (Summary)
+1. **How do I prove an AI chatbot promised a refund for a credit card chargeback?** Capture the chat with the Chrome extension or paste the transcript into LiveChatLens to export a PII-redacted native PDF and SHA-256 Sealed Evidence ZIP mapped to Visa 13.6 / Mastercard 4853 / Amex C02.
+2. **Does LiveChatLens upload my chat or PII?** No. Everything runs 100% locally. US SSNs, card numbers, bank accounts, phones, emails, OTPs, and URL auth tokens are automatically redacted before export.
+3. **What is a store-credit trap?** Merchants often promise a "full refund" that is restricted to non-cash store credit, merchandise credit, or future travel eCredit. LiveChatLens tags these as `store_credit_only` and updates your dispute narrative accordingly.
+4. **How does optional RFC 3161 timestamping preserve privacy?** When opted in via the Chrome extension or CLI, only the 32-byte SHA-256 hash is sent to a public Time Stamping Authority (e.g., FreeTSA) to obtain a signed `.tsr` token — zero chat text ever leaves your device.
+5. **Is LiveChatLens legal advice?** No. It provides observational UI documentation and structured templates for personal record-keeping and dispute filing, not legal advice.

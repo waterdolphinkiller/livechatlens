@@ -1,0 +1,35 @@
+{
+  "name": "live-chat-ai-detector",
+  "version": "2.1.0",
+  "private": true,
+  "description": "LiveChatLens — Open-source live-chat AI transparency, automation, human handoff, and consumer evidence inspector.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:offline": "node scripts/build-offline.mjs",
+    "build:playground": "node scripts/build-offline.mjs && node scripts/build-playground.mjs",
+    "test": "node scripts/build-offline.mjs && node --test packages/core/dist/tests/core.test.mjs",
+    "benchmark": "node scripts/build-offline.mjs && node scripts/benchmark.mjs",
+    "verify": "npm run test && npm run benchmark && npm run build:playground",
+    "redteam": "node scripts/build-offline.mjs && node scripts/redteam-30-agents.mjs && node scripts/redteam-mixed-agents.mjs && node scripts/redteam-coop-agents.mjs",
+    "eval:us-corpora:offline": "node scripts/build-offline.mjs && node scripts/eval-us-corpora.mjs --offline",
+    "eval:us-corpora:live": "node scripts/build-offline.mjs && node scripts/eval-us-corpora.mjs --live --limit 100",
+    "redteam:coop": "node scripts/build-offline.mjs && node scripts/redteam-coop-agents.mjs",
+    "fuzz": "node scripts/build-offline.mjs && node scripts/fuzz-agents.mjs",
+    "test:extension-dom": "node scripts/build-offline.mjs && node scripts/test-extension-dom.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "bin": {
+    "livechatlens": "./apps/cli/livechatlens.mjs"
+  }
+}

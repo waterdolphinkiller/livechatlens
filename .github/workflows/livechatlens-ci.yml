@@ -1,0 +1,26 @@
+name: LiveChatLens CI & Adversarial Security Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify-and-redteam:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run unit tests, benchmarks, and Playground/Extension build
+        run: npm run verify
+      - name: Run 52-agent Red-Team, Mixed E2E, and Cooperative Battle Suite
+        run: npm run redteam
+      - name: Run 1,500-case Seeded Fuzzing & Mutation Engine
+        run: npm run fuzz
+      - name: Run Top-10 US Widget Extension DOM Regression Harness
+        run: npm run test:extension-dom
+      - name: Run US Corpora Offline Evaluation
+        run: npm run eval:us-corpora:offline

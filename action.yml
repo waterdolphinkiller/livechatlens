@@ -1,0 +1,33 @@
+name: "LiveChatLens — US AI Chatbot & CA AB 1609 Compliance Gate"
+description: "Zero-dependency CI compliance gate auditing live-chat transcripts and fixtures for California AB 1609 / SB 1001 AI disclosure, WCAG visibility, human-handoff routes, and high-stakes commitment hallucinations."
+author: "LiveChatLens Contributors"
+branding:
+  icon: "shield"
+  color: "blue"
+inputs:
+  input-path:
+    description: "Path to a live-chat transcript (.txt) or ConversationSession JSON file to audit."
+    required: true
+  fail-on-dark-patterns:
+    description: "Fail the CI step if LOW_VISIBILITY_DISCLOSURE, BURIED_TOS_DISCLOSURE, HANDOFF_LOOP_FRICTION, or FAKE_HUMAN_HANDOFF is detected."
+    required: false
+    default: "true"
+  fail-on-late-disclosure:
+    description: "Fail the CI step if AI is disclosed late (after first responder turn) or undisclosed."
+    required: false
+    default: "true"
+  fail-on-store-credit-trap:
+    description: "Fail the CI step if an automated agent makes a store_credit_only or high-stakes policy_exception promise."
+    required: false
+    default: "false"
+runs:
+  using: "composite"
+  steps:
+    - name: Run LiveChatLens CA AB 1609 Compliance Gate
+      shell: bash
+      run: |
+        ARGS=("ab1609" "${{ inputs.input-path }}")
+        if [ "${{ inputs.fail-on-dark-patterns }}" = "true" ]; then ARGS+=("--fail-on-dark-patterns"); fi
+        if [ "${{ inputs.fail-on-late-disclosure }}" = "true" ]; then ARGS+=("--fail-on-late-disclosure"); fi
+        if [ "${{ inputs.fail-on-store-credit-trap }}" = "true" ]; then ARGS+=("--fail-on-store-credit-trap"); fi
+        node "${{ github.action_path }}/apps/cli/livechatlens.mjs" "${ARGS[@]}"

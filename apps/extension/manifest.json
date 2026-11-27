@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "LiveChatLens — Live Chat AI Transparency & Chargeback Evidence Inspector",
+  "version": "2.1.0",
+  "description": "Local-first inspector for US live customer-support chats: AI disclosure timing (CA/UT/ME), dark patterns, human-escape friction, commitment risks, native PDF & SHA-256 chargeback packs.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "storage"
+  ],
+  "optional_host_permissions": [
+    "https://*.intercom.io/*",
+    "https://*.zdassets.com/*",
+    "https://*.zendesk.com/*",
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*",
+    "https://*.ada.support/*",
+    "https://*.sierra.chat/*",
+    "https://*.gorgias.chat/*",
+    "https://*.crisp.chat/*",
+    "https://*.tidio.co/*",
+    "https://*.drift.com/*",
+    "https://*.tawk.to/*",
+    "https://freetsa.org/*"
+  ],
+  "action": {
+    "default_title": "Open LiveChatLens Inspector"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
